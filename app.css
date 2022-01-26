@@ -248,12 +248,21 @@ nav .line {
   letter-spacing: 0.025em;
 }
 
+.s-two p:nth-of-type(1) {
+  color: black;
+  font-weight: 400;
+  line-height: 2em;
+  font-size: 0.9em;
+  margin-bottom: 1.75em;
+  letter-spacing: 0.025em;
+}
+
 .s-two span {
   position: relative;
   border: none;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 0.85em;
+  font-size: 0.75em;
   color: black;
   cursor: pointer;
   transition: background 0.5s ease-in-out;
@@ -281,4 +290,121 @@ nav .line {
 
 .s-two h1:nth-of-type(2) {
   margin-top: 1.25em;
+}
+
+.s-two p:nth-of-type(2) {
+  color: black;
+  font-weight: 400;
+  line-height: 2em;
+  font-size: 0.9em;
+  letter-spacing: 0.025em;
+  margin-bottom: -0.5em;
+}
+
+.s-two img:nth-of-type(2) {
+  margin-bottom: 2em;
+}
+
+.s-two p:nth-of-type(3) {
+  color: black;
+}
+
+.s-two h2 {
+  color: black;
+  font-size: 1.35em;
+  font-weight: 500;
+  margin-bottom: 0.75em;
+  line-height: 1.15em;
+  letter-spacing: 0.025em;
+}
+
+.s-two img:nth-of-type(3) {
+  margin-bottom: 4em;
+}
+
+.s-two .social-box {
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 6em;
+}
+
+.s-two .social-box p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.s-two h2:nth-of-type(2) {
+  margin-top: 2em;
+}
+
+.s-three {
+  width: 100%;
+  height: 100%;
+  background: rgb(235, 235, 235);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.s-three h1 {
+  color: black;
+  font-size: 2em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  line-height: 1.15em;
+  letter-spacing: 0.025em;
+}
+
+.s-three h1:nth-of-type(1) {
+  color: black;
+  font-size: 2em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  line-height: 1.15em;
+  letter-spacing: 0.025em;
+  margin-top: 1.5em;
+}
+
+.s-three p {
+  color: black;
+  font-weight: 400;
+  line-height: 2em;
+  font-size: 0.9em;
+  margin-bottom: 1.75em;
+  letter-spacing: 0.025em;
+}
+
+.s-three p:nth-of-type(1) {
+  color: black;
+  font-weight: 400;
+  line-height: 2em;
+  font-size: 0.9em;
+  margin-bottom: 1.75em;
+  letter-spacing: 0.025em;
+  width: 80%;
+}
+
+.s-three span {
+  position: relative;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.75em;
+  color: black;
+  cursor: pointer;
+  transition: background 0.5s ease-in-out;
+}
+
+.s-three span::after {
+  content: "";
+  position: absolute;
+  height: 0.5px;
+  bottom: -7px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.281);
+  width: 95%;
+  transition: width 0.25s;
 }
