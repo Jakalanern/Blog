@@ -37,6 +37,8 @@
 
 body,
 html {
+  overflow-x: hidden;
+  overflow-y: scroll;
   height: 100%;
   width: 100%;
 }
@@ -46,8 +48,6 @@ body {
   letter-spacing: 0.1em;
   color: rgba(5, 5, 5, 0.89);
   background: var(--clr-dark);
-  overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 /************  NAV ************** */
