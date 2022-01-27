@@ -11,12 +11,14 @@
     <title>Squarespace Blog</title>
   </head>
   <body>
-    <div class="dropdown">
-      <ul>
-        <li>Blog</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
+    <div class="dropdown-container">
+      <div class="dropdown">
+        <ul>
+          <li>Blog</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
     </div>
 
     <nav>
@@ -48,12 +50,13 @@
           ></path>
         </svg>
       </a>
-      <div class="burger">
+      <span class="get-started">Get Started</span>
+      <div class="burger" id="margin-left-auto">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
       </div>
-      <div class="x">X</div>
+      <div class="x" id="margin-left-auto">X</div>
     </nav>
 
     <section id="main" class="main">
@@ -65,12 +68,14 @@
         </p>
         <button>Get Started</button>
       </div>
-      <img class="main-arrow" src="icons/down-arrow.png" alt="" />
+      <a href="#s-two"
+        ><img class="main-arrow" src="icons/down-arrow.png" alt=""
+      /></a>
     </section>
 
     <section id="s-two" class="s-two">
       <div class="content">
-        <h1>
+        <h1 id="s-two-header">
           Award-Winning <br />
           Web Design
         </h1>
@@ -121,7 +126,113 @@
         creative storytellers.
       </p>
       <span>Create a Website</span>
+      <div class="img-container">
+        <img src="imgs/yassmin.jpg" alt="" />
+        <div class="tag">Yassmin Abdel-Magied</div>
+      </div>
+      <div class="img-container">
+        <img src="imgs/she-does-him.jpg" alt="" />
+        <div class="tag">She Does Him</div>
+      </div>
+
+      <div class="img-container">
+        <img src="imgs/lee-from-america.jpg" alt="" />
+        <div class="tag">Lee From America</div>
+      </div>
+
+      <div class="img-container">
+        <img src="imgs/scandinavialist.jpg" alt="" />
+        <div class="tag">Scandinavialist</div>
+      </div>
+
+      <div class="img-container">
+        <img src="imgs/black-girl-in-om.jpg" alt="" />
+        <div class="tag">Black Girl in Om</div>
+      </div>
+
+      <div class="img-container">
+        <img src="imgs/hotel-weekend.jpg" alt="" />
+        <div class="tag">Hotel Weekend</div>
+      </div>
     </section>
+
+    <section id="s-four" class="s-four">
+      <img src="imgs/guy-n-girl.jpg" alt="" />
+      <h3>24/7 Support</h3>
+      <h1>
+        Award-Winning, <br />
+        Expert Customer <br />
+        Care
+      </h1>
+      <p>
+        Get personalized support from our Customer Care Team via email or live
+        chat. Customer Care Advisors are highly trained and work with Designers
+        and Engineers in our New York City, Dublin, and Portland offices. They
+        have deep Squarespace knowledge and are ready to help whenever you need
+        it. Reach out any time — we’re here 24/7.
+      </p>
+      <span>Visit Our Help Center</span>
+      <span>Contact Customer Care</span>
+      <span>Join a Webinar</span>
+    </section>
+
+    <footer>
+      <div class="footer-nav-heading">
+        <span>Products</span><img src="icons/down-arrow.png" alt="" />
+      </div>
+      <div class="footer-nav-heading">
+        <span>Customers</span><img src="icons/down-arrow.png" alt="" />
+      </div>
+      <div class="footer-nav-heading">
+        <span>Company</span><img src="icons/down-arrow.png" alt="" />
+      </div>
+      <div class="footer-nav-heading">
+        <span>Community</span><img src="icons/down-arrow.png" alt="" />
+      </div>
+      <div class="footer-nav-heading">
+        <span>Follow</span><img src="icons/down-arrow.png" alt="" />
+      </div>
+      <div class="bottom-square">
+        <div class="button-wrapper">
+          <button class="currency">
+            <span>$ USD</span><img src="icons/down-arrow.png" alt="" />
+          </button>
+          <button class="language">
+            <span>English</span><img src="icons/down-arrow.png" alt="" />
+          </button>
+        </div>
+        <div class="company-name">
+          <a class="www-navigation__mobile__logo" href="/">
+            <svg
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 37 31"
+              class="squarespace-mark is-fill notranslate"
+            >
+              <title>Squarespace Logo</title>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="m7.583 16.216 11.562-11.98a4.063 4.063 0 0 1 5.889 0l.9.933 1.802-1.867-.9-.934C25.57 1.058 23.885.335 22.089.335c-1.794 0-3.48.723-4.745 2.034L5.78 14.35l1.802 1.867Z"
+                fill="#fff"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="m23.017 8.192-1.802-1.867-11.562 11.98a4.067 4.067 0 0 1-5.888 0c-1.624-1.682-1.624-4.42 0-6.102L13.74 1.867 11.94 0 1.963 10.337c-2.617 2.711-2.617 7.124 0 9.835 1.265 1.311 2.95 2.034 4.745 2.034s3.481-.723 4.747-2.034l11.562-11.98ZM34.527 10.336a6.553 6.553 0 0 0-9.492 0l-11.562 11.98 1.8 1.868 11.563-11.98a4.067 4.067 0 0 1 5.889 0 4.364 4.364 0 0 1 1.217 3.05 4.365 4.365 0 0 1-1.217 3.051l-9.977 10.337 1.802 1.867 9.977-10.337c2.617-2.711 2.617-7.124 0-9.836Z"
+                fill="#fff"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="m28.906 14.293-11.562 11.98a4.067 4.067 0 0 1-5.889 0l-.9-.933-1.803 1.867.901.933c1.266 1.311 2.951 2.034 4.747 2.034 1.795 0 3.48-.723 4.746-2.035L30.708 16.16l-1.802-1.867Z"
+                fill="#fff"
+              ></path>
+            </svg> </a
+          ><span>Squarespace</span>
+        </div>
+      </div>
+    </footer>
 
     <script src="app.js"></script>
   </body>

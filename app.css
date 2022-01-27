@@ -8,15 +8,16 @@
 }
 
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 4px;
+  z-index: 1000000;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--clr-dark);
+  background: var(--clr-white);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--clr-white);
+  background: var(--clr-dark);
   border-radius: 1em;
 }
 
@@ -37,8 +38,6 @@
 
 body,
 html {
-  overflow-x: hidden;
-  overflow-y: scroll;
   height: 100%;
   width: 100%;
 }
@@ -67,7 +66,7 @@ nav svg {
 }
 
 .dropdown {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   right: -100%;
@@ -117,16 +116,30 @@ nav svg {
   width: 75%;
 }
 
+nav span {
+  display: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: 2px solid white;
+  margin-left: auto;
+  margin-right: 1.75em;
+  cursor: pointer;
+}
+
 nav .burger {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 35px;
-  height: 25px;
-  margin-left: auto;
+  height: 40px;
   cursor: pointer;
   padding: 2px;
   z-index: 99;
+}
+
+#margin-left-auto {
+  margin-left: auto;
 }
 
 nav .x {
@@ -134,13 +147,13 @@ nav .x {
   color: white;
   font-size: 1.75em;
   transform: scaleX(1.35);
-  margin-left: auto;
-  margin-right: 0.25em;
+  padding: 3px;
+  margin-left: 0.375em;
   cursor: pointer;
 }
 
 nav .line {
-  height: 1px;
+  height: 2px;
   width: 100%;
   background: white;
 }
@@ -166,9 +179,9 @@ nav .line {
   height: 100vh;
   z-index: -1;
 
-  opacity: 0.7;
+  opacity: 0.5;
 
-  background: url(https://images.unsplash.com/photo-1632216498026-6afe200f13d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+  background: url(imgs/main-background-2.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -190,7 +203,7 @@ nav .line {
   font-weight: 400;
   line-height: 2em;
   font-size: 0.8em;
-  margin-bottom: 1.75em;
+  margin-bottom: 2.25em;
 }
 
 .main button {
@@ -209,9 +222,14 @@ nav .line {
 }
 
 .main .main-arrow {
-  position: absolute;
-  top: 87.5%;
+  position: relative;
   width: 50px;
+  cursor: pointer;
+}
+
+.main a {
+  position: absolute;
+  top: 85%;
   cursor: pointer;
 }
 
@@ -222,6 +240,7 @@ nav .line {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .s-two .content {
@@ -258,6 +277,9 @@ nav .line {
 }
 
 .s-two span {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
   position: relative;
   border: none;
   text-transform: uppercase;
@@ -339,7 +361,6 @@ nav .line {
 
 .s-three {
   width: 100%;
-  height: 100%;
   background: rgb(235, 235, 235);
   display: flex;
   flex-direction: column;
@@ -386,6 +407,9 @@ nav .line {
 }
 
 .s-three span {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
   position: relative;
   border: none;
   text-transform: uppercase;
@@ -394,6 +418,7 @@ nav .line {
   color: black;
   cursor: pointer;
   transition: background 0.5s ease-in-out;
+  margin-bottom: 4.5em;
 }
 
 .s-three span::after {
@@ -407,4 +432,192 @@ nav .line {
   background: rgba(0, 0, 0, 0.281);
   width: 95%;
   transition: width 0.25s;
+}
+
+.s-three .img-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.s-three img {
+  width: 325px;
+  height: 200px;
+  border-radius: 0.25em;
+}
+
+.s-three .tag {
+  text-transform: uppercase;
+  margin-top: 1.25em;
+  margin-left: 0.25em;
+  font-weight: 400;
+  font-size: 0.7em;
+  align-self: flex-start;
+}
+
+.s-three .tag:last-child {
+  margin-bottom: 6em;
+}
+
+.s-four {
+  width: 100%;
+  background: rgb(218, 218, 218);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.s-four img {
+  margin-top: 3.5em;
+  width: 325px;
+  height: 200px;
+  border-radius: 0.25em;
+}
+
+.s-four img:first-child {
+  margin-bottom: 3em;
+}
+
+.s-four h3 {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+.s-four h1 {
+  color: black;
+  font-size: 2em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  line-height: 1.15em;
+  letter-spacing: 0.025em;
+}
+
+.s-four p {
+  color: black;
+  font-weight: 400;
+  line-height: 2em;
+  font-size: 0.9em;
+  margin-bottom: 1.75em;
+  letter-spacing: 0.025em;
+  width: 85%;
+}
+
+.s-four span {
+  cursor: pointer;
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.212);
+  font-weight: 400;
+  color: black;
+  font-size: 0.8em;
+  margin-bottom: 2em;
+}
+
+.s-four span:last-child {
+  margin-bottom: 6em;
+}
+
+footer {
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+footer .footer-nav-heading {
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  text-transform: uppercase;
+  padding-left: 1em;
+  padding-top: 1em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+footer .footer-nav-heading span {
+  font-weight: 600;
+}
+
+footer .footer-nav-heading img {
+  cursor: pointer;
+  width: 25px;
+  margin-right: 1em;
+}
+
+footer .footer-nav-heading:first-child {
+  padding-top: 4em;
+}
+
+footer .bottom-square {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .button-wrapper {
+  background: black;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding: 3em 4em 2em 4em;
+  align-items: center;
+}
+
+footer .button-wrapper button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(22, 22, 22);
+  border: none;
+  padding: 1em 1em;
+  min-width: 115px;
+  max-width: 175px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+footer .button-wrapper button:hover {
+  background: rgb(32, 32, 32);
+}
+
+footer button span {
+  text-transform: uppercase;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.671);
+}
+
+footer .button-wrapper img {
+  cursor: pointer;
+  width: 25px;
+}
+
+footer .company-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 4em;
+}
+
+footer .company-name svg {
+  width: 35px;
+}
+
+footer .company-name span {
+  font-size: 1.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transform: translateY(-1px);
+}
+
+footer .footer-nav-heading:nth-of-type(2),
+footer .footer-nav-heading:nth-of-type(3),
+footer .footer-nav-heading:nth-of-type(4),
+footer .footer-nav-heading:nth-of-type(5),
+footer .button-wrapper {
 }

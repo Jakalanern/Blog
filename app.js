@@ -2,6 +2,7 @@ let burger = document.querySelector(".burger");
 let x = document.querySelector(".x");
 let dropdown = document.querySelector(".dropdown");
 let navbar = document.querySelector("nav");
+let getStarted = document.querySelector(".get-started");
 
 x.style.display = "none";
 
@@ -24,8 +25,15 @@ window.addEventListener("scroll", function () {
     document.body.scrollTop >= 25 ||
     document.documentElement.scrollTop >= 25
   ) {
+    burger.removeAttribute("id");
+    x.removeAttribute("id");
+
+    getStarted.style.display = "initial";
     navbar.style.background = "black";
   } else {
     navbar.style.background = "transparent";
+    getStarted.style.display = "none";
+    burger.id = "margin-left-auto";
+    x.id = "margin-left-auto";
   }
 });
