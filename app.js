@@ -3,6 +3,8 @@ let x = document.querySelector(".x");
 let dropdown = document.querySelector(".dropdown");
 let navbar = document.querySelector("nav");
 let getStarted = document.querySelector(".get-started");
+let footerNavContent = document.querySelectorAll(".footer-nav-content");
+let footerArrow = document.querySelectorAll(".footer-arrow");
 
 x.style.display = "none";
 
@@ -36,4 +38,39 @@ window.addEventListener("scroll", function () {
     burger.id = "margin-left-auto";
     x.id = "margin-left-auto";
   }
+});
+
+footerArrow[0].addEventListener("click", function () {
+  for (let f of footerNavContent) {
+    f.style.color = "transparent";
+  }
+  footerNavContent[0].classList.toggle("height-auto");
+});
+
+footerArrow[1].addEventListener("click", function () {
+  for (let f of footerNavContent) {
+    f.style.color = "transparent";
+  }
+  footerNavContent[1].classList.toggle("height-auto");
+});
+
+footerArrow[2].addEventListener("click", function () {
+  for (let f of footerNavContent) {
+    f.style.color = "transparent";
+  }
+  footerNavContent[2].classList.toggle("height-auto");
+});
+
+footerArrow[3].addEventListener("click", function () {
+  for (let f of footerNavContent) {
+    f.style.color = "transparent";
+  }
+  footerNavContent[3].classList.toggle("height-auto");
+});
+
+footerArrow[4].addEventListener("click", function () {
+  for (let f of footerNavContent) {
+    f.style.color = "transparent";
+  }
+  footerNavContent[4].classList.toggle("height-auto");
 });

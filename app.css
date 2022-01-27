@@ -61,8 +61,11 @@ nav {
   z-index: 99;
 }
 
-nav svg {
-  width: 35px;
+nav .icon {
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  font-weight: 400;
 }
 
 nav span {
@@ -121,7 +124,7 @@ nav .line {
   transition: right 0.4s;
 
   background: black;
-  z-index: 98;
+  z-index: 99;
 }
 
 .dropdown ul {
@@ -166,6 +169,7 @@ nav .line {
   letter-spacing: 0.1em;
   margin-bottom: 2em;
   cursor: pointer;
+  z-index: 100;
 }
 
 .dropdown button {
@@ -177,6 +181,7 @@ nav .line {
   cursor: pointer;
   border: none;
   transition: background 0.2s;
+  z-index: 100;
 }
 
 .dropdown button:hover {
@@ -274,6 +279,8 @@ nav .line {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  padding-top: 50px;
 }
 
 .s-two .content {
@@ -584,6 +591,37 @@ footer .footer-nav-heading:first-child {
   padding-top: 4em;
 }
 
+footer .footer-nav-content {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+  gap: 0.5em;
+  text-transform: uppercase;
+  transition: height 0.5s ease, color 0.5s;
+  height: 0;
+  color: transparent;
+}
+
+.height-auto {
+  height: 175px !important;
+  color: rgba(255, 255, 255, 0.575) !important;
+}
+
+footer .footer-nav-content span {
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.25s;
+}
+
+footer .footer-nav-content span:first-child {
+  margin-top: 2em;
+}
+
+footer .footer-nav-content span:hover {
+  color: rgba(255, 255, 255, 0.808);
+}
+
 footer .bottom-square {
   display: flex;
   flex-direction: column;
@@ -632,20 +670,21 @@ footer .button-wrapper img {
 
 footer .company-name {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 0.5em;
   margin-bottom: 4em;
 }
 
-footer .company-name svg {
-  width: 35px;
+footer .company-name .icon {
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  font-weight: 400;
+  transition: color 0.25s;
 }
 
-footer .company-name span {
-  font-size: 1.15em;
-  text-transform: uppercase;
-  font-weight: 600;
-  transform: translateY(-1px);
+footer .company-name .icon:hover {
+  color: rgba(255, 255, 255, 0.774);
 }
 
 @media (min-width: 775px) {
