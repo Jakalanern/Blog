@@ -57,63 +57,12 @@ nav {
   align-items: center;
   width: 100%;
   padding: 1em 1.5em;
-  z-index: 99;
   transition: background 0.5s;
+  z-index: 99;
 }
 
 nav svg {
   width: 35px;
-}
-
-.dropdown {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  right: -100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  transition: right 0.4s;
-
-  background: rgba(0, 0, 0, 0.932);
-  z-index: 98;
-}
-
-.dropdown ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: right;
-  list-style: none;
-  gap: 3em;
-}
-
-.dropdown li {
-  position: relative;
-  font-weight: 400;
-  font-size: 3em;
-  cursor: pointer;
-  width: max-content;
-  text-align: center;
-}
-
-.dropdown li::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  bottom: -1.5px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  background: white;
-  width: 33%;
-  transition: width 0.25s;
-}
-
-.dropdown li:hover::after {
-  width: 75%;
 }
 
 nav span {
@@ -150,12 +99,96 @@ nav .x {
   padding: 3px;
   margin-left: 0.375em;
   cursor: pointer;
+  z-index: 99;
 }
 
 nav .line {
   height: 2px;
   width: 100%;
   background: white;
+}
+
+.dropdown {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: white;
+  transition: right 0.4s;
+
+  background: black;
+  z-index: 98;
+}
+
+.dropdown ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  gap: 1.5em;
+  margin-top: 10em;
+  margin-left: 2em;
+}
+
+.dropdown li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  width: max-content;
+}
+
+.dropdown li span {
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+  margin-right: 0.33rem;
+  letter-spacing: 0.1em;
+}
+
+.dropdown .login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.dropdown .login {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  margin-bottom: 2em;
+  cursor: pointer;
+}
+
+.dropdown button {
+  width: 92.5%;
+  padding: 1.25rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s;
+}
+
+.dropdown button:hover {
+  background: rgba(255, 255, 255, 0.815);
+}
+
+.dropdown img {
+  width: 25px;
+}
+
+.dropdown li:hover::after {
+  width: 75%;
 }
 
 .main {
@@ -214,7 +247,7 @@ nav .line {
   color: black;
   background: white;
   cursor: pointer;
-  transition: background 0.5s ease-in-out;
+  transition: background 0.25s ease-in-out;
 }
 
 .main button:hover {
@@ -259,15 +292,6 @@ nav .line {
 }
 
 .s-two p {
-  color: black;
-  font-weight: 400;
-  line-height: 2em;
-  font-size: 0.9em;
-  margin-bottom: 1.75em;
-  letter-spacing: 0.025em;
-}
-
-.s-two p:nth-of-type(1) {
   color: black;
   font-weight: 400;
   line-height: 2em;
@@ -437,12 +461,21 @@ nav .line {
 .s-three .img-container {
   display: flex;
   flex-direction: column;
+  transition: outline 0.25s;
 }
 
 .s-three img {
   width: 325px;
   height: 200px;
   border-radius: 0.25em;
+  opacity: 0.9;
+  transition: opacity 0.25s, box-shadow 0.25s;
+}
+
+.s-three img:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1.5px black;
+  opacity: 1;
 }
 
 .s-three .tag {
@@ -615,9 +648,35 @@ footer .company-name span {
   transform: translateY(-1px);
 }
 
-footer .footer-nav-heading:nth-of-type(2),
-footer .footer-nav-heading:nth-of-type(3),
-footer .footer-nav-heading:nth-of-type(4),
-footer .footer-nav-heading:nth-of-type(5),
-footer .button-wrapper {
+@media (min-width: 775px) {
+  .img-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0em 6em;
+  }
+
+  p {
+    width: 50% !important;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .img-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0em 6em;
+  }
+
+  p {
+    width: 33% !important;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 2000px) {
+  p {
+    width: 22% !important;
+    margin: 0 auto;
+  }
 }
