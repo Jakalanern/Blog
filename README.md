@@ -6,4 +6,4 @@ Responsive Design
 Clear Aesthetic and Color Scheme
 Responsive Navbar with changing background on scroll w/ Javascript
 
-jakalanern.github.io/blog/
+https://jakalanern.github.io/Blog/
